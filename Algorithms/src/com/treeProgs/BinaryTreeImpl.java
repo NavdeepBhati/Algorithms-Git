@@ -1,12 +1,12 @@
 package com.treeProgs;
 
-class Node {
+class NodeTree {
 
 	int data;
-	Node right;
-	Node left;
+	NodeTree right;
+	NodeTree left;
 
-	public Node(int data) {
+	public NodeTree(int data) {
 		this.data = data;
 	}
 }
@@ -14,29 +14,29 @@ class Node {
 
 public class BinaryTreeImpl {
 
-	Node root;
+	NodeTree root;
 	
 	public static void main(String[] args) {
 		
 		BinaryTreeImpl tree= new BinaryTreeImpl();
 		
-		tree.root=new Node(1);
+		tree.root=new NodeTree(1);
 
-		tree.root.left= new Node(2);
-		tree.root.right= new Node(3);
+		tree.root.left= new NodeTree(2);
+		tree.root.right= new NodeTree(3);
 		
 
-		tree.root.left.left= new Node(4);
-		tree.root.left.right= new Node(5);
+		tree.root.left.left= new NodeTree(4);
+		tree.root.left.right= new NodeTree(5);
 
 		
-		tree.root.right.left= new Node(6);
-		tree.root.right.right= new Node(7);
+		tree.root.right.left= new NodeTree(6);
+		tree.root.right.right= new NodeTree(7);
 	
 	printTree(tree.root);
 	}
 
-	private static void printTree(Node root2) {
+	private static void printTree(NodeTree root2) {
 
 		if (root2!=null) {
 			System.out.println(root2.data);
